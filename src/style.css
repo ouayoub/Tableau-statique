@@ -22,3 +22,20 @@ label {
 .etat a {
  background-color: rgb(80, 255, 80);
 }
+
+.btnAjouter {
+ color: rgb(133, 133, 133) !important;
+ background-color: orange !important;
+ outline: none !important;
+}
+
+.btnAjouter:active {
+ box-shadow: 0px;
+}
+
+.ajouter-utilisateur {
+ color: rgb(133, 133, 133) !important;
+ background-color: orange !important;
+ outline: none !important;
+
+}
