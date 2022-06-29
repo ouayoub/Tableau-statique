@@ -27,3 +27,52 @@ let users = [
    registrationNumber: "3576",
  }
 ];
+
+function addTr(id,date, etat, nom, prenom, nomd, mat) {
+ users.push({
+  id: id,
+  createdDate: "2021-09-15T00:00:00.000Z",
+  status: "Rejeté",
+  firstName: "Rachid",
+  lastName: "Mahidi",
+  userName: "rmahidi",
+  registrationNumber: "3576",
+ });
+ let styleClass = getEtatClass(etat);
+return `<tr class="border-top" id="user-${id}">
+<td class="id" id="id">${id}</td>
+<td class="date" id="date">${date}</td>
+<td class="etat"  id="etat">
+ <a href="#" class="p-2 pe-3 ps-3 rounded-2 ${styleClass}">
+  ${etat}
+ </a>
+</td>
+<td class="nom">${nom}</td>
+<td class="prenom">${prenom}</td>
+<td class="nomd">${nomd}</td>
+<td class="mat">${mat}</td>
+<td class="action" id="action"><img src="../img/trash-bin.png" alt=""
+  onclick="removeTr(${id})"></td>
+</tr>`;
+}
+function btnAjouter() {
+ let table_body = document.getElementById('table_body')
+
+var id =  table_body.rows.length+ 1
+var date = document.getElementById("frm_createdDate").value;
+var etat = document.getElementById("frm_etat").value;
+var nom = document.getElementById("frm_nom").value;
+var prenom = document.getElementById("frm_prenom").value;
+var nomd = document.getElementById("frm_username").value;
+var mat = document.getElementById("frm_matricule").value;
+
+const str = addTr(id, date, etat, nom, prenom, nomd, mat);
+table_body.insertAdjacentHTML( 'beforeend', str )
+
+ document.getElementById("frm_createdDate").value = '';
+ document.getElementById("frm_etat").value = '';
+ document.getElementById("frm_nom").value = '';
+ document.getElementById("frm_prenom").value = '';
+ document.getElementById("frm_username").value = '';
+ document.getElementById("frm_matricule").value = '';
+}
