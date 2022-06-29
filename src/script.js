@@ -28,6 +28,8 @@ let users = [
  }
 ];
 
+
+
 function addTr(id,date, etat, nom, prenom, nomd, mat) {
  users.push({
   id: id,
@@ -75,4 +77,31 @@ table_body.insertAdjacentHTML( 'beforeend', str )
  document.getElementById("frm_prenom").value = '';
  document.getElementById("frm_username").value = '';
  document.getElementById("frm_matricule").value = '';
+}
+
+function clean_first_tr(firstTr) {
+ let children = firstTr.children;
+ 
+ children = Array.isArray(children) ? children : Object.values(children);
+ children.forEach(x=>{
+     if(x !== firstTr.lastElementChild)
+     {
+         x.firstElementChild.value = '';
+     }
+ });
+}
+
+
+// remove function
+function removeTr(id) {
+ let row = document.getElementById('user-'+id);
+ console.log(users);
+ users = users.filter(function(user) { return user.id !== id });
+ console.log(users);
+ if(row == null)
+ {
+     alert("You Don't have Permission to Delete This ?");
+ }else{
+  row.remove();
+ }
 }
