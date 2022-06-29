@@ -28,7 +28,17 @@ let users = [
  }
 ];
 
+function getEtatClass(etat) {
+ var className = "valide";
 
+ if (etat == "Rejeté") {
+  className = "rejected";
+ }
+ if (etat == "En validation") {
+  className = "on-validation";
+ }
+ return className;
+}
 
 function addTr(id,date, etat, nom, prenom, nomd, mat) {
  users.push({

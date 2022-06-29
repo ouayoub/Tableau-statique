@@ -39,3 +39,16 @@ label {
  outline: none !important;
 
 }
+
+
+.valide {
+ background-color: #5BE881 !important;
+}
+
+.rejected {
+ background-color: #FF0000 !important;
+}
+
+.on-validation {
+ background-color: #FDB64D !important;
+}
