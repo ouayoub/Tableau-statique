@@ -1,54 +1,59 @@
-tr th {
- padding: 15px !important;
-}
+ tr th {
+  padding: 15px !important;
+ }
 
-tr td {
- padding: 15px !important;
-}
+ tr td {
+  padding: 15px !important;
+ }
 
-a {
- text-decoration: none !important;
- color: rgb(34, 34, 34) !important;
-}
+ a {
+  text-decoration: none !important;
+  color: rgb(34, 34, 34) !important;
+ }
 
-label {
- color: rgb(133, 133, 133);
-}
+ label {
+  color: rgb(133, 133, 133);
+ }
 
-.action img {
- width: 20px;
-}
+ .action img {
+  width: 20px;
+ }
 
-.etat a {
- background-color: rgb(80, 255, 80);
-}
+ .etat a {
+  background-color: #5BE881;
+ }
 
-.btnAjouter {
- color: rgb(133, 133, 133) !important;
- background-color: orange !important;
- outline: none !important;
-}
+ .btnAjouter {
+  color: rgb(133, 133, 133) !important;
+  background-color: orange !important;
+  outline: none !important;
+ }
 
-.btnAjouter:active {
- box-shadow: 0px;
-}
+ .btnAjouter:active {
+  box-shadow: 0px;
+ }
 
-.ajouter-utilisateur {
- color: rgb(133, 133, 133) !important;
- background-color: orange !important;
- outline: none !important;
+ .ajouter-utilisateur {
+  color: rgb(133, 133, 133) !important;
+  background-color: orange !important;
+  outline: none !important;
 
-}
+ }
 
+ /*
+>>>> color status <<<<
+*/
+ .valide {
+  background-color: #5BE881 !important;
+  color: white !important;
+ }
 
-.valide {
- background-color: #5BE881 !important;
-}
+ .rejected {
+  background-color: #FF0000 !important;
+  color: white !important;
+ }
 
-.rejected {
- background-color: #FF0000 !important;
-}
-
-.on-validation {
- background-color: #FDB64D !important;
-}
+ .on-validation {
+  background-color: #FDB64D !important;
+  color: white !important;
+ }
